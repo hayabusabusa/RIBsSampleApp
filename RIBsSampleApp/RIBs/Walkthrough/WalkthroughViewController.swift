@@ -17,13 +17,38 @@ protocol WalkthroughPresentableListener: class {
 }
 
 final class WalkthroughViewController: UIViewController, WalkthroughPresentable, WalkthroughViewControllable {
-
+    
+    // MARK: IBOutlet
+    
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var pageControl: UIPageControl!
+    
+    // MARK: Properties
+    
     weak var listener: WalkthroughPresentableListener?
+    
+    private let disposeBag = DisposeBag()
     
     // MARK: Lifecycle
     
     static func instantiate() -> WalkthroughViewController {
         let vc = Storyboard.WalkthroughViewController.instantiate(WalkthroughViewController.self)
         return vc
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViews()
+    }
+}
+
+// MARK: - Setup
+
+extension WalkthroughViewController {
+    
+    private func setupViews() {
+        scrollView.rx.currentPage
+            .bind(to: pageControl.rx.currentPage)
+            .disposed(by: disposeBag)
     }
 }
