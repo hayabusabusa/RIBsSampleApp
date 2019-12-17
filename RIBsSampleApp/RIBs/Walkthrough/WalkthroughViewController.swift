@@ -22,6 +22,7 @@ final class WalkthroughViewController: UIViewController, WalkthroughPresentable,
     
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var pageControl: UIPageControl!
+    @IBOutlet private weak var nextButton: UIButton!
     
     // MARK: Properties
     
@@ -47,8 +48,15 @@ final class WalkthroughViewController: UIViewController, WalkthroughPresentable,
 extension WalkthroughViewController {
     
     private func setupViews() {
+        // PageControl
         scrollView.rx.currentPage
             .bind(to: pageControl.rx.currentPage)
+            .disposed(by: disposeBag)
+        // Button
+        nextButton.isEnabled = false
+        scrollView.rx.currentPage
+            .map { $0 >= 2 }
+            .bind(to: nextButton.rx.isEnabled)
             .disposed(by: disposeBag)
     }
 }

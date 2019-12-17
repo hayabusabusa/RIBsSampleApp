@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
 
-    func replaceRootViewController(by nextViewController: UIViewController) {
+    func replaceRoot(to nextViewController: UIViewController) {
         guard let window = UIApplication.shared.keyWindow else { return }
 
         if window.rootViewController?.presentedViewController != nil {

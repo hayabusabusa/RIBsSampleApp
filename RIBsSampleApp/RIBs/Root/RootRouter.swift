@@ -16,9 +16,10 @@ protocol RootInteractable: Interactable, WalkthroughListener {
     var listener: RootListener? { get set }
 }
 
+// Something to do on ViewController.
 protocol RootViewControllable: ViewControllable {
-    // VC
     func present(viewControllable: ViewControllable)
+    func replaceRoot(viewControllable: ViewControllable)
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
