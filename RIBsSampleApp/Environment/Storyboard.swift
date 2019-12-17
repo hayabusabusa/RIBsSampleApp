@@ -12,6 +12,7 @@ enum Storyboard: String {
     case RootViewController
     case WalkthroughViewController
     case LoginViewController
+    case DashboardViewController
     
     func instantiate<VC: UIViewController>(_: VC.Type) -> VC {
         guard let vc = UIStoryboard(name: self.rawValue, bundle: nil).instantiateInitialViewController() as? VC else {

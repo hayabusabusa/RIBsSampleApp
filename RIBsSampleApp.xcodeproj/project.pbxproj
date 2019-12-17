@@ -46,6 +46,11 @@
 		A4F9DF6523A8B1B4007E0E07 /* LocalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6423A8B1B4007E0E07 /* LocalSettings.swift */; };
 		A4F9DF6723A8B499007E0E07 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6623A8B499007E0E07 /* Configurations.swift */; };
 		A4F9DF6923A8B555007E0E07 /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6823A8B554007E0E07 /* LineTextField.swift */; };
+		A4F9DF7023A8BF7E007E0E07 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6B23A8BF7E007E0E07 /* DashboardRouter.swift */; };
+		A4F9DF7123A8BF7E007E0E07 /* DashboardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F9DF6C23A8BF7E007E0E07 /* DashboardViewController.storyboard */; };
+		A4F9DF7223A8BF7E007E0E07 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6D23A8BF7E007E0E07 /* DashboardViewController.swift */; };
+		A4F9DF7323A8BF7E007E0E07 /* DashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6E23A8BF7E007E0E07 /* DashboardBuilder.swift */; };
+		A4F9DF7423A8BF7E007E0E07 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6F23A8BF7E007E0E07 /* DashboardInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +120,11 @@
 		A4F9DF6423A8B1B4007E0E07 /* LocalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSettings.swift; sourceTree = "<group>"; };
 		A4F9DF6623A8B499007E0E07 /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		A4F9DF6823A8B554007E0E07 /* LineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
+		A4F9DF6B23A8BF7E007E0E07 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		A4F9DF6C23A8BF7E007E0E07 /* DashboardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashboardViewController.storyboard; sourceTree = "<group>"; };
+		A4F9DF6D23A8BF7E007E0E07 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		A4F9DF6E23A8BF7E007E0E07 /* DashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBuilder.swift; sourceTree = "<group>"; };
+		A4F9DF6F23A8BF7E007E0E07 /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +209,7 @@
 				71EACEB623A7DCF8001DD92D /* Root */,
 				A4F9DF3E23A85F1C007E0E07 /* Walkthrough */,
 				A4F9DF5723A89F94007E0E07 /* Login */,
+				A4F9DF6A23A8BF61007E0E07 /* Dashboard */,
 			);
 			path = RIBs;
 			sourceTree = "<group>";
@@ -296,6 +307,18 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		A4F9DF6A23A8BF61007E0E07 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A4F9DF6B23A8BF7E007E0E07 /* DashboardRouter.swift */,
+				A4F9DF6C23A8BF7E007E0E07 /* DashboardViewController.storyboard */,
+				A4F9DF6D23A8BF7E007E0E07 /* DashboardViewController.swift */,
+				A4F9DF6E23A8BF7E007E0E07 /* DashboardBuilder.swift */,
+				A4F9DF6F23A8BF7E007E0E07 /* DashboardInteractor.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -379,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F9DF7123A8BF7E007E0E07 /* DashboardViewController.storyboard in Resources */,
 				7156F1F023A548FA007DA980 /* LaunchScreen.storyboard in Resources */,
 				7156F1ED23A548FA007DA980 /* Assets.xcassets in Resources */,
 				A4F9DF5E23A89FAB007E0E07 /* LoginViewController.storyboard in Resources */,
@@ -427,6 +451,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F9DF4A23A860DE007E0E07 /* RootDependencyWalkthrough.swift in Sources */,
+				A4F9DF7423A8BF7E007E0E07 /* DashboardInteractor.swift in Sources */,
+				A4F9DF7223A8BF7E007E0E07 /* DashboardViewController.swift in Sources */,
 				A4F9DF4D23A87657007E0E07 /* UIScrollView+Rx.swift in Sources */,
 				A4F9DF6723A8B499007E0E07 /* Configurations.swift in Sources */,
 				A4F9DF6323A8A090007E0E07 /* RootDependencyLogin.swift in Sources */,
@@ -437,6 +463,7 @@
 				A4F9DF5F23A89FAB007E0E07 /* LoginViewController.swift in Sources */,
 				A4F9DF4723A85F4A007E0E07 /* WalkthroughBuilder.swift in Sources */,
 				71EACEC623A7E018001DD92D /* AppComponent.swift in Sources */,
+				A4F9DF7323A8BF7E007E0E07 /* DashboardBuilder.swift in Sources */,
 				71EACEBC23A7DD58001DD92D /* RootRouter.swift in Sources */,
 				A4F9DF5523A89F4A007E0E07 /* BaseViewController.swift in Sources */,
 				A4F9DF4423A85F4A007E0E07 /* WalkthroughRouter.swift in Sources */,
@@ -451,6 +478,7 @@
 				A4F9DF6023A89FAB007E0E07 /* LoginBuilder.swift in Sources */,
 				71EACEBF23A7DD58001DD92D /* RootBuilder.swift in Sources */,
 				A4F9DF4623A85F4A007E0E07 /* WalkthroughViewController.swift in Sources */,
+				A4F9DF7023A8BF7E007E0E07 /* DashboardRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
