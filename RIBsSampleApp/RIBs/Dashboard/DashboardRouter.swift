@@ -8,19 +8,28 @@
 
 import RIBs
 
-protocol DashboardInteractable: Interactable {
+protocol DashboardInteractable: Interactable, TimerListener {
     var router: DashboardRouting? { get set }
     var listener: DashboardListener? { get set }
 }
 
 protocol DashboardViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    
 }
 
 final class DashboardRouter: ViewableRouter<DashboardInteractable, DashboardViewControllable>, DashboardRouting {
 
-    // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: DashboardInteractable, viewController: DashboardViewControllable) {
+    // MARK: Child RIBs
+    
+    private let timerBuilder: TimerBuildable
+    private var timer: ViewableRouting?
+    
+    init(interactor: DashboardInteractable,
+                  viewController: DashboardViewControllable,
+                  timerBuilder: TimerBuildable) {
+        // Child RIBs
+        self.timerBuilder = timerBuilder
+        
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }

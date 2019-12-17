@@ -21,6 +21,12 @@
 		7156F21023A54955007DA980 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20923A54954007DA980 /* RIBs.framework */; };
 		7156F21123A54955007DA980 /* RIBs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20923A54954007DA980 /* RIBs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		716C716923A8FBFD00A78E9D /* AnimationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C716823A8FBFD00A78E9D /* AnimationButton.swift */; };
+		716C717023A90D4500A78E9D /* TimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C716B23A90D4500A78E9D /* TimerRouter.swift */; };
+		716C717123A90D4500A78E9D /* TimerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716C716C23A90D4500A78E9D /* TimerViewController.storyboard */; };
+		716C717223A90D4500A78E9D /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C716D23A90D4500A78E9D /* TimerViewController.swift */; };
+		716C717323A90D4500A78E9D /* TimerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C716E23A90D4500A78E9D /* TimerBuilder.swift */; };
+		716C717423A90D4500A78E9D /* TimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C716F23A90D4500A78E9D /* TimerInteractor.swift */; };
+		716C717723A90DB500A78E9D /* DashboardDpendencyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C717623A90DB500A78E9D /* DashboardDpendencyTimer.swift */; };
 		71EACEBC23A7DD58001DD92D /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEB723A7DD58001DD92D /* RootRouter.swift */; };
 		71EACEBD23A7DD58001DD92D /* RootViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71EACEB823A7DD58001DD92D /* RootViewController.storyboard */; };
 		71EACEBE23A7DD58001DD92D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEB923A7DD58001DD92D /* RootViewController.swift */; };
@@ -97,6 +103,12 @@
 		7156F20823A54954007DA980 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		7156F20923A54954007DA980 /* RIBs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RIBs.framework; path = Carthage/Build/iOS/RIBs.framework; sourceTree = "<group>"; };
 		716C716823A8FBFD00A78E9D /* AnimationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationButton.swift; sourceTree = "<group>"; };
+		716C716B23A90D4500A78E9D /* TimerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRouter.swift; sourceTree = "<group>"; };
+		716C716C23A90D4500A78E9D /* TimerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerViewController.storyboard; sourceTree = "<group>"; };
+		716C716D23A90D4500A78E9D /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		716C716E23A90D4500A78E9D /* TimerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBuilder.swift; sourceTree = "<group>"; };
+		716C716F23A90D4500A78E9D /* TimerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInteractor.swift; sourceTree = "<group>"; };
+		716C717623A90DB500A78E9D /* DashboardDpendencyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDpendencyTimer.swift; sourceTree = "<group>"; };
 		71EACEB723A7DD58001DD92D /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		71EACEB823A7DD58001DD92D /* RootViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootViewController.storyboard; sourceTree = "<group>"; };
 		71EACEB923A7DD58001DD92D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +219,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		716C716A23A90D3100A78E9D /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				716C716B23A90D4500A78E9D /* TimerRouter.swift */,
+				716C716C23A90D4500A78E9D /* TimerViewController.storyboard */,
+				716C716D23A90D4500A78E9D /* TimerViewController.swift */,
+				716C716E23A90D4500A78E9D /* TimerBuilder.swift */,
+				716C716F23A90D4500A78E9D /* TimerInteractor.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		716C717523A90D9E00A78E9D /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				716C717623A90DB500A78E9D /* DashboardDpendencyTimer.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
 		71EACEB523A7DCEC001DD92D /* RIBs */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +246,7 @@
 				A4F9DF3E23A85F1C007E0E07 /* Walkthrough */,
 				A4F9DF5723A89F94007E0E07 /* Login */,
 				A4F9DF6A23A8BF61007E0E07 /* Dashboard */,
+				716C716A23A90D3100A78E9D /* Timer */,
 			);
 			path = RIBs;
 			sourceTree = "<group>";
@@ -316,6 +349,7 @@
 		A4F9DF6A23A8BF61007E0E07 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				716C717523A90D9E00A78E9D /* Dependency */,
 				A4F9DF6B23A8BF7E007E0E07 /* DashboardRouter.swift */,
 				A4F9DF6C23A8BF7E007E0E07 /* DashboardViewController.storyboard */,
 				A4F9DF6D23A8BF7E007E0E07 /* DashboardViewController.swift */,
@@ -412,6 +446,7 @@
 				7156F1F023A548FA007DA980 /* LaunchScreen.storyboard in Resources */,
 				7156F1ED23A548FA007DA980 /* Assets.xcassets in Resources */,
 				A4F9DF5E23A89FAB007E0E07 /* LoginViewController.storyboard in Resources */,
+				716C717123A90D4500A78E9D /* TimerViewController.storyboard in Resources */,
 				A4F9DF4523A85F4A007E0E07 /* WalkthroughViewController.storyboard in Resources */,
 				71EACEBD23A7DD58001DD92D /* RootViewController.storyboard in Resources */,
 			);
@@ -463,6 +498,7 @@
 				A4F9DF4D23A87657007E0E07 /* UIScrollView+Rx.swift in Sources */,
 				A4F9DF6723A8B499007E0E07 /* Configurations.swift in Sources */,
 				A4F9DF6323A8A090007E0E07 /* RootDependencyLogin.swift in Sources */,
+				716C717723A90DB500A78E9D /* DashboardDpendencyTimer.swift in Sources */,
 				A4F9DF6923A8B555007E0E07 /* LineTextField.swift in Sources */,
 				A4F9DF6123A89FAB007E0E07 /* LoginInteractor.swift in Sources */,
 				71EACEBE23A7DD58001DD92D /* RootViewController.swift in Sources */,
@@ -470,22 +506,26 @@
 				A4F9DF5F23A89FAB007E0E07 /* LoginViewController.swift in Sources */,
 				A4F9DF4723A85F4A007E0E07 /* WalkthroughBuilder.swift in Sources */,
 				71EACEC623A7E018001DD92D /* AppComponent.swift in Sources */,
+				716C717023A90D4500A78E9D /* TimerRouter.swift in Sources */,
 				A4F9DF7323A8BF7E007E0E07 /* DashboardBuilder.swift in Sources */,
 				71EACEBC23A7DD58001DD92D /* RootRouter.swift in Sources */,
 				A4F9DF7623A8C12A007E0E07 /* RootDependencyDashboard.swift in Sources */,
 				A4F9DF5523A89F4A007E0E07 /* BaseViewController.swift in Sources */,
 				A4F9DF4423A85F4A007E0E07 /* WalkthroughRouter.swift in Sources */,
 				A4F9DF4823A85F4A007E0E07 /* WalkthroughInteractor.swift in Sources */,
+				716C717423A90D4500A78E9D /* TimerInteractor.swift in Sources */,
 				71EACEC023A7DD58001DD92D /* RootInteractor.swift in Sources */,
 				71EACEC323A7DD93001DD92D /* Storyboard.swift in Sources */,
 				A4F9DF5223A89A92007E0E07 /* RoundedButton.swift in Sources */,
 				A4F9DF6523A8B1B4007E0E07 /* LocalSettings.swift in Sources */,
 				7156F1E423A548F8007DA980 /* AppDelegate.swift in Sources */,
 				A4F9DF5D23A89FAB007E0E07 /* LoginRouter.swift in Sources */,
+				716C717323A90D4500A78E9D /* TimerBuilder.swift in Sources */,
 				7156F1E623A548F8007DA980 /* SceneDelegate.swift in Sources */,
 				A4F9DF6023A89FAB007E0E07 /* LoginBuilder.swift in Sources */,
 				71EACEBF23A7DD58001DD92D /* RootBuilder.swift in Sources */,
 				A4F9DF4623A85F4A007E0E07 /* WalkthroughViewController.swift in Sources */,
+				716C717223A90D4500A78E9D /* TimerViewController.swift in Sources */,
 				A4F9DF7023A8BF7E007E0E07 /* DashboardRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,6 +24,8 @@ final class RootViewController: BaseViewController, RootPresentable, RootViewCon
         let vc = Storyboard.RootViewController.instantiate(RootViewController.self)
         return vc
     }
+    
+    // TODO: Impl splash animation
 }
 
 extension RootViewController {
