@@ -20,6 +20,7 @@
 		7156F20F23A54955007DA980 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20823A54954007DA980 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7156F21023A54955007DA980 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20923A54954007DA980 /* RIBs.framework */; };
 		7156F21123A54955007DA980 /* RIBs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20923A54954007DA980 /* RIBs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		716C716923A8FBFD00A78E9D /* AnimationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C716823A8FBFD00A78E9D /* AnimationButton.swift */; };
 		71EACEBC23A7DD58001DD92D /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEB723A7DD58001DD92D /* RootRouter.swift */; };
 		71EACEBD23A7DD58001DD92D /* RootViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71EACEB823A7DD58001DD92D /* RootViewController.storyboard */; };
 		71EACEBE23A7DD58001DD92D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEB923A7DD58001DD92D /* RootViewController.swift */; };
@@ -95,6 +96,7 @@
 		7156F20723A54954007DA980 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		7156F20823A54954007DA980 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		7156F20923A54954007DA980 /* RIBs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RIBs.framework; path = Carthage/Build/iOS/RIBs.framework; sourceTree = "<group>"; };
+		716C716823A8FBFD00A78E9D /* AnimationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationButton.swift; sourceTree = "<group>"; };
 		71EACEB723A7DD58001DD92D /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		71EACEB823A7DD58001DD92D /* RootViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootViewController.storyboard; sourceTree = "<group>"; };
 		71EACEB923A7DD58001DD92D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 			children = (
 				A4F9DF6823A8B554007E0E07 /* LineTextField.swift */,
 				A4F9DF5123A89A92007E0E07 /* RoundedButton.swift */,
+				716C716823A8FBFD00A78E9D /* AnimationButton.swift */,
 			);
 			path = Skin;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 			files = (
 				A4F9DF4A23A860DE007E0E07 /* RootDependencyWalkthrough.swift in Sources */,
 				A4F9DF7423A8BF7E007E0E07 /* DashboardInteractor.swift in Sources */,
+				716C716923A8FBFD00A78E9D /* AnimationButton.swift in Sources */,
 				A4F9DF7223A8BF7E007E0E07 /* DashboardViewController.swift in Sources */,
 				A4F9DF4D23A87657007E0E07 /* UIScrollView+Rx.swift in Sources */,
 				A4F9DF6723A8B499007E0E07 /* Configurations.swift in Sources */,
