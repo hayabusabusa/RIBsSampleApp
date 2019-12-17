@@ -36,6 +36,7 @@
 		A4F9DF4D23A87657007E0E07 /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF4C23A87657007E0E07 /* UIScrollView+Rx.swift */; };
 		A4F9DF4F23A882D7007E0E07 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF4E23A882D7007E0E07 /* UIViewController+Extension.swift */; };
 		A4F9DF5223A89A92007E0E07 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF5123A89A92007E0E07 /* RoundedButton.swift */; };
+		A4F9DF5523A89F4A007E0E07 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF5423A89F4A007E0E07 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		A4F9DF4C23A87657007E0E07 /* UIScrollView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Rx.swift"; sourceTree = "<group>"; };
 		A4F9DF4E23A882D7007E0E07 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		A4F9DF5123A89A92007E0E07 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		A4F9DF5423A89F4A007E0E07 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,9 +239,26 @@
 		A4F9DF5023A89A0B007E0E07 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A4F9DF5123A89A92007E0E07 /* RoundedButton.swift */,
+				A4F9DF5323A89F3A007E0E07 /* Base */,
+				A4F9DF5623A89F6A007E0E07 /* Skin */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A4F9DF5323A89F3A007E0E07 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A4F9DF5423A89F4A007E0E07 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A4F9DF5623A89F6A007E0E07 /* Skin */ = {
+			isa = PBXGroup;
+			children = (
+				A4F9DF5123A89A92007E0E07 /* RoundedButton.swift */,
+			);
+			path = Skin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +397,7 @@
 				A4F9DF4723A85F4A007E0E07 /* WalkthroughBuilder.swift in Sources */,
 				71EACEC623A7E018001DD92D /* AppComponent.swift in Sources */,
 				71EACEBC23A7DD58001DD92D /* RootRouter.swift in Sources */,
+				A4F9DF5523A89F4A007E0E07 /* BaseViewController.swift in Sources */,
 				A4F9DF4423A85F4A007E0E07 /* WalkthroughRouter.swift in Sources */,
 				A4F9DF4823A85F4A007E0E07 /* WalkthroughInteractor.swift in Sources */,
 				71EACEC023A7DD58001DD92D /* RootInteractor.swift in Sources */,
