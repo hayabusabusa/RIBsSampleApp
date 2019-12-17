@@ -12,4 +12,8 @@ import RxSwift
 class BaseViewController: UIViewController {
     
     let disposeBag = DisposeBag()
+    
+    deinit {
+        print("[DEINIT] ✨🧹 \(type(of: self)) was deinit.")
+    }
 }

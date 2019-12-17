@@ -11,12 +11,10 @@ import RxSwift
 import UIKit
 
 protocol WalkthroughPresentableListener: class {
-    // TODO: Declare properties and methods that the view controller can invoke to perform
-    // business logic, such as signIn(). This protocol is implemented by the corresponding
-    // interactor class.
+    func endWalkthrough()
 }
 
-final class WalkthroughViewController: UIViewController, WalkthroughPresentable, WalkthroughViewControllable {
+final class WalkthroughViewController: BaseViewController, WalkthroughPresentable, WalkthroughViewControllable {
     
     // MARK: IBOutlet
     
@@ -27,8 +25,6 @@ final class WalkthroughViewController: UIViewController, WalkthroughPresentable,
     // MARK: Properties
     
     weak var listener: WalkthroughPresentableListener?
-    
-    private let disposeBag = DisposeBag()
     
     // MARK: Lifecycle
     
@@ -57,6 +53,9 @@ extension WalkthroughViewController {
         scrollView.rx.currentPage
             .map { $0 >= 2 }
             .bind(to: nextButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        nextButton.rx.tap.asSignal()
+            .emit(onNext: { [weak self] in self?.listener?.endWalkthrough() })
             .disposed(by: disposeBag)
     }
 }

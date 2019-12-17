@@ -14,7 +14,7 @@ protocol RootPresentableListener: class {
     // Interactor
 }
 
-final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
+final class RootViewController: BaseViewController, RootPresentable, RootViewControllable {
 
     weak var listener: RootPresentableListener?
     

@@ -10,7 +10,7 @@ import RIBs
 import RxSwift
 
 protocol RootRouting: ViewableRouting {
-    
+    func routeToLogin()
 }
 
 protocol RootPresentable: Presentable {
@@ -37,5 +37,14 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
 
     override func willResignActive() {
         super.willResignActive()
+    }
+}
+
+// MARK: - Child RIBs listener
+
+extension RootInteractor {
+    
+    func didEndWalkthrough() {
+        router?.routeToLogin()
     }
 }

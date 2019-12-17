@@ -11,7 +11,8 @@ import RIBs
 /// RootRIB Interactable
 ///
 /// - Child RIB: Walkthrough RIB
-protocol RootInteractable: Interactable, WalkthroughListener {
+/// - Child RIB: Login RIB
+protocol RootInteractable: Interactable, WalkthroughListener, LoginListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
@@ -29,12 +30,17 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     private let walkthroughBuilder: WalkthroughBuildable
     private var walkthrough: ViewableRouting?
     
+    private let loginBuilder: LoginBuildable
+    private var login: ViewableRouting?
+    
     // MARK: Initializer
 
     init(interactor: RootInteractable,
                   viewController: RootViewControllable,
-                  walkthroughBuilder: WalkthroughBuildable) {
+                  walkthroughBuilder: WalkthroughBuildable,
+                  loginBuilder: LoginBuildable) {
         self.walkthroughBuilder = walkthroughBuilder
+        self.loginBuilder = loginBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
@@ -58,6 +64,25 @@ extension RootRouter {
         self.walkthrough = walkthrough
         attachChild(walkthrough)
         
-        viewController.present(viewControllable: walkthrough.viewControllable)
+        viewController.replaceRoot(viewControllable: walkthrough.viewControllable)
+    }
+}
+
+// MARK: - Child RIBs routing
+
+extension RootRouter {
+    
+    func routeToLogin() {
+        guard let walkthrough = walkthrough else { return }
+        let login = loginBuilder.build(withListener: interactor)
+        
+        // Detach
+        detachChild(walkthrough)
+        self.walkthrough = nil
+        
+        // Attach
+        self.login = login
+        attachChild(login)
+        viewController.replaceRoot(viewControllable: login.viewControllable)
     }
 }

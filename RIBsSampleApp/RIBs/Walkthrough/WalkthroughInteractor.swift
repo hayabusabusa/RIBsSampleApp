@@ -9,17 +9,19 @@
 import RIBs
 import RxSwift
 
+// Router
 protocol WalkthroughRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    
 }
 
+// ViewController
 protocol WalkthroughPresentable: Presentable {
     var listener: WalkthroughPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
+// Other RIBs
 protocol WalkthroughListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didEndWalkthrough()
 }
 
 final class WalkthroughInteractor: PresentableInteractor<WalkthroughPresentable>, WalkthroughInteractable, WalkthroughPresentableListener {
@@ -27,8 +29,6 @@ final class WalkthroughInteractor: PresentableInteractor<WalkthroughPresentable>
     weak var router: WalkthroughRouting?
     weak var listener: WalkthroughListener?
 
-    // TODO: Add additional dependencies to constructor. Do not perform any logic
-    // in constructor.
     override init(presenter: WalkthroughPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
@@ -36,11 +36,16 @@ final class WalkthroughInteractor: PresentableInteractor<WalkthroughPresentable>
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        // TODO: Implement business logic here.
     }
 
     override func willResignActive() {
         super.willResignActive()
-        // TODO: Pause any business logic.
+    }
+}
+
+extension WalkthroughInteractor {
+    
+    func endWalkthrough() {
+        listener?.didEndWalkthrough()
     }
 }

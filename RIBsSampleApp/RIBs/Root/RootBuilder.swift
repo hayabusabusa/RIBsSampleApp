@@ -35,9 +35,11 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
         
         // Child RIBs
         let walkthroughBuilder = WalkthroughBuilder(dependency: component)
+        let loginBuilder = LoginBuilder(dependency: component)
         
         return RootRouter(interactor: interactor,
                           viewController: viewController,
-                          walkthroughBuilder: walkthroughBuilder)
+                          walkthroughBuilder: walkthroughBuilder,
+                          loginBuilder: loginBuilder)
     }
 }
