@@ -10,16 +10,15 @@ import RIBs
 import RxSwift
 
 protocol DashboardRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToTimer()
 }
 
 protocol DashboardPresentable: Presentable {
     var listener: DashboardPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
 protocol DashboardListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    
 }
 
 final class DashboardInteractor: PresentableInteractor<DashboardPresentable>, DashboardInteractable, DashboardPresentableListener {
@@ -42,5 +41,12 @@ final class DashboardInteractor: PresentableInteractor<DashboardPresentable>, Da
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+}
+
+extension DashboardInteractor {
+    
+    func tapFabButton() {
+        router?.routeToTimer()
     }
 }

@@ -14,7 +14,7 @@ protocol DashboardInteractable: Interactable, TimerListener {
 }
 
 protocol DashboardViewControllable: ViewControllable {
-    
+    func present(viewControllable: ViewControllable)
 }
 
 final class DashboardRouter: ViewableRouter<DashboardInteractable, DashboardViewControllable>, DashboardRouting {
@@ -32,5 +32,15 @@ final class DashboardRouter: ViewableRouter<DashboardInteractable, DashboardView
         
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
+    }
+}
+
+extension DashboardRouter {
+    
+    func routeToTimer() {
+        let timer = timerBuilder.build(withListener: interactor)
+        self.timer = timer
+        attachChild(timer)
+        viewController.present(viewControllable: timer.viewControllable)
     }
 }
