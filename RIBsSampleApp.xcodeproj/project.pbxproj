@@ -34,6 +34,7 @@
 		A4F9DF4823A85F4A007E0E07 /* WalkthroughInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF4323A85F4A007E0E07 /* WalkthroughInteractor.swift */; };
 		A4F9DF4A23A860DE007E0E07 /* RootDependencyWalkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF4923A860DE007E0E07 /* RootDependencyWalkthrough.swift */; };
 		A4F9DF4D23A87657007E0E07 /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF4C23A87657007E0E07 /* UIScrollView+Rx.swift */; };
+		A4F9DF4F23A882D7007E0E07 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF4E23A882D7007E0E07 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		A4F9DF4323A85F4A007E0E07 /* WalkthroughInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughInteractor.swift; sourceTree = "<group>"; };
 		A4F9DF4923A860DE007E0E07 /* RootDependencyWalkthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDependencyWalkthrough.swift; sourceTree = "<group>"; };
 		A4F9DF4C23A87657007E0E07 /* UIScrollView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Rx.swift"; sourceTree = "<group>"; };
+		A4F9DF4E23A882D7007E0E07 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +195,8 @@
 		71EACEC123A7DD61001DD92D /* Environment */ = {
 			isa = PBXGroup;
 			children = (
-				A4F9DF4B23A87644007E0E07 /* Util */,
 				71EACEC223A7DD93001DD92D /* Storyboard.swift */,
+				A4F9DF4B23A87644007E0E07 /* Util */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				A4F9DF4C23A87657007E0E07 /* UIScrollView+Rx.swift */,
+				A4F9DF4E23A882D7007E0E07 /* UIViewController+Extension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				A4F9DF4A23A860DE007E0E07 /* RootDependencyWalkthrough.swift in Sources */,
 				A4F9DF4D23A87657007E0E07 /* UIScrollView+Rx.swift in Sources */,
 				71EACEBE23A7DD58001DD92D /* RootViewController.swift in Sources */,
+				A4F9DF4F23A882D7007E0E07 /* UIViewController+Extension.swift in Sources */,
 				A4F9DF4723A85F4A007E0E07 /* WalkthroughBuilder.swift in Sources */,
 				71EACEC623A7E018001DD92D /* AppComponent.swift in Sources */,
 				71EACEBC23A7DD58001DD92D /* RootRouter.swift in Sources */,
