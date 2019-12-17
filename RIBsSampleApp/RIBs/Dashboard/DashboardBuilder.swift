@@ -32,7 +32,7 @@ final class DashboardBuilder: Builder<DashboardDependency>, DashboardBuildable {
 
     func build(withListener listener: DashboardListener) -> DashboardRouting {
         //let component = DashboardComponent(dependency: dependency)
-        let viewController = DashboardViewController()
+        let viewController = DashboardViewController.instantiate()
         let interactor = DashboardInteractor(presenter: viewController)
         interactor.listener = listener
         return DashboardRouter(interactor: interactor, viewController: viewController)
