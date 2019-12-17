@@ -43,6 +43,7 @@
 		A4F9DF6023A89FAB007E0E07 /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF5B23A89FAB007E0E07 /* LoginBuilder.swift */; };
 		A4F9DF6123A89FAB007E0E07 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF5C23A89FAB007E0E07 /* LoginInteractor.swift */; };
 		A4F9DF6323A8A090007E0E07 /* RootDependencyLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6223A8A090007E0E07 /* RootDependencyLogin.swift */; };
+		A4F9DF6523A8B1B4007E0E07 /* LocalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6423A8B1B4007E0E07 /* LocalSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		A4F9DF5B23A89FAB007E0E07 /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
 		A4F9DF5C23A89FAB007E0E07 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		A4F9DF6223A8A090007E0E07 /* RootDependencyLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDependencyLogin.swift; sourceTree = "<group>"; };
+		A4F9DF6423A8B1B4007E0E07 /* LocalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				71EACEC223A7DD93001DD92D /* Storyboard.swift */,
+				A4F9DF6423A8B1B4007E0E07 /* LocalSettings.swift */,
 				A4F9DF4B23A87644007E0E07 /* Util */,
 			);
 			path = Environment;
@@ -433,6 +436,7 @@
 				71EACEC023A7DD58001DD92D /* RootInteractor.swift in Sources */,
 				71EACEC323A7DD93001DD92D /* Storyboard.swift in Sources */,
 				A4F9DF5223A89A92007E0E07 /* RoundedButton.swift in Sources */,
+				A4F9DF6523A8B1B4007E0E07 /* LocalSettings.swift in Sources */,
 				7156F1E423A548F8007DA980 /* AppDelegate.swift in Sources */,
 				A4F9DF5D23A89FAB007E0E07 /* LoginRouter.swift in Sources */,
 				7156F1E623A548F8007DA980 /* SceneDelegate.swift in Sources */,

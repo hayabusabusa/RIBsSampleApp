@@ -46,6 +46,8 @@ final class WalkthroughInteractor: PresentableInteractor<WalkthroughPresentable>
 extension WalkthroughInteractor {
     
     func endWalkthrough() {
+        // Save walkthrough status
+        LocalSettings.saveWalkThroughStatus(true)
         listener?.didEndWalkthrough()
     }
 }

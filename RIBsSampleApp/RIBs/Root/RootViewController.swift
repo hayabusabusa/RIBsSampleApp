@@ -28,13 +28,6 @@ final class RootViewController: BaseViewController, RootPresentable, RootViewCon
 
 extension RootViewController {
     
-    func present(viewControllable: ViewControllable) {
-        let vc = viewControllable.uiviewController
-        vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .crossDissolve
-        present(vc, animated: true, completion: nil)
-    }
-    
     func replaceRoot(viewControllable: ViewControllable) {
         let vc = viewControllable.uiviewController
         replaceRoot(to: vc)

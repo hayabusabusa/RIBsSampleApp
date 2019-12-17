@@ -19,7 +19,6 @@ protocol RootInteractable: Interactable, WalkthroughListener, LoginListener {
 
 // Something to do on ViewController.
 protocol RootViewControllable: ViewControllable {
-    func present(viewControllable: ViewControllable)
     func replaceRoot(viewControllable: ViewControllable)
 }
 
@@ -60,11 +59,20 @@ extension RootRouter {
     private func attachChildRIBs() {
         // didLoadでattachしてViewをPresentするとRootVCのセットが終わる前にPresentするためエラーが出る. 
         // Unbalanced calls to begin/end appearance transitions( https://github.com/uber/RIBs/issues/165 )
-        let walkthrough = walkthroughBuilder.build(withListener: interactor)
-        self.walkthrough = walkthrough
-        attachChild(walkthrough)
+        if LocalSettings.getWalkThroughStatus() {
+            let login = loginBuilder.build(withListener: interactor)
+            self.login = login
+            attachChild(login)
+            
+            viewController.replaceRoot(viewControllable: login.viewControllable)
+        } else {
+            let walkthrough = walkthroughBuilder.build(withListener: interactor)
+            self.walkthrough = walkthrough
+            attachChild(walkthrough)
+            
+            viewController.replaceRoot(viewControllable: walkthrough.viewControllable)
+        }
         
-        viewController.replaceRoot(viewControllable: walkthrough.viewControllable)
     }
 }
 
