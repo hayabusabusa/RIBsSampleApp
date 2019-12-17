@@ -9,13 +9,11 @@
 import RIBs
 
 protocol RootDependency: Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
+    
 }
 
 final class RootComponent: Component<RootDependency> {
-
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    
 }
 
 // MARK: - Builder
@@ -31,9 +29,15 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
     }
 
     func build() -> LaunchRouting {
-        //let component = RootComponent(dependency: dependency)
+        let component = RootComponent(dependency: dependency)
         let viewController = RootViewController.instantiate()
         let interactor = RootInteractor(presenter: viewController)
-        return LaunchRouter(interactor: interactor, viewController: viewController)
+        
+        // Child RIBs
+        let walkthroughBuilder = WalkthroughBuilder(dependency: component)
+        
+        return RootRouter(interactor: interactor,
+                          viewController: viewController,
+                          walkthroughBuilder: walkthroughBuilder)
     }
 }

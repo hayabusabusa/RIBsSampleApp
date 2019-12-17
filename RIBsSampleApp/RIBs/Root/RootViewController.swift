@@ -25,3 +25,13 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
         return vc
     }
 }
+
+extension RootViewController {
+    
+    func present(viewControllable: ViewControllable) {
+        let vc = viewControllable.uiviewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true, completion: nil)
+    }
+}
