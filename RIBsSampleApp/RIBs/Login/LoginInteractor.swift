@@ -10,16 +10,17 @@ import RIBs
 import RxSwift
 
 protocol LoginRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    // Router
 }
 
 protocol LoginPresentable: Presentable {
     var listener: LoginPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
+    
+    func updateErrorMessage(message: String?)
 }
 
 protocol LoginListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    // Parent RIB
 }
 
 final class LoginInteractor: PresentableInteractor<LoginPresentable>, LoginInteractable, LoginPresentableListener {
@@ -27,8 +28,6 @@ final class LoginInteractor: PresentableInteractor<LoginPresentable>, LoginInter
     weak var router: LoginRouting?
     weak var listener: LoginListener?
 
-    // TODO: Add additional dependencies to constructor. Do not perform any logic
-    // in constructor.
     override init(presenter: LoginPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
@@ -36,11 +35,26 @@ final class LoginInteractor: PresentableInteractor<LoginPresentable>, LoginInter
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        // TODO: Implement business logic here.
     }
 
     override func willResignActive() {
         super.willResignActive()
-        // TODO: Pause any business logic.
+    }
+}
+
+// MARK: - Listener
+
+extension LoginInteractor {
+    
+    func login(userName: String?, password: String?) {
+        guard let userName = userName,
+            let password = password else { return }
+        
+        if userName == Configurations.kCommonUserName,
+            password == Configurations.kCommonUserPassword {
+            presenter.updateErrorMessage(message: nil)
+        } else {
+            presenter.updateErrorMessage(message: "ユーザー名もしくはパスワードが一致しません。")
+        }
     }
 }
