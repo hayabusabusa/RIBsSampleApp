@@ -11,6 +11,7 @@ import RxSwift
 
 protocol RootRouting: ViewableRouting {
     func routeToLogin()
+    func routeToDashboard()
 }
 
 protocol RootPresentable: Presentable {
@@ -46,5 +47,9 @@ extension RootInteractor {
     
     func didEndWalkthrough() {
         router?.routeToLogin()
+    }
+    
+    func didLogin() {
+        router?.routeToDashboard()
     }
 }

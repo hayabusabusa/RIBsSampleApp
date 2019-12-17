@@ -20,6 +20,7 @@ protocol RootInteractable: Interactable, WalkthroughListener, LoginListener, Das
 // Something to do on ViewController.
 protocol RootViewControllable: ViewControllable {
     func replaceRoot(viewControllable: ViewControllable)
+    func replaceRootWithNavigation(viewControllable: ViewControllable)
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
@@ -67,11 +68,22 @@ extension RootRouter {
         // didLoadでattachしてViewをPresentするとRootVCのセットが終わる前にPresentするためエラーが出る. 
         // Unbalanced calls to begin/end appearance transitions( https://github.com/uber/RIBs/issues/165 )
         if LocalSettings.getWalkThroughStatus() {
-            let login = loginBuilder.build(withListener: interactor)
-            self.login = login
-            attachChild(login)
             
-            viewController.replaceRoot(viewControllable: login.viewControllable)
+            switch LocalSettings.getLoginStatus() {
+            case .loggedOut:
+                let login = loginBuilder.build(withListener: interactor)
+                self.login = login
+                attachChild(login)
+                
+                viewController.replaceRoot(viewControllable: login.viewControllable)
+            case .loggedIn:
+                let dashboard = dashboardBuilder.build(withListener: interactor)
+                self.dashboard = dashboard
+                attachChild(dashboard)
+                
+                viewController.replaceRootWithNavigation(viewControllable: dashboard.viewControllable)
+            }
+            
         } else {
             let walkthrough = walkthroughBuilder.build(withListener: interactor)
             self.walkthrough = walkthrough
@@ -99,5 +111,19 @@ extension RootRouter {
         self.login = login
         attachChild(login)
         viewController.replaceRoot(viewControllable: login.viewControllable)
+    }
+    
+    func routeToDashboard() {
+        guard let login = login else { return }
+        let dashboard = dashboardBuilder.build(withListener: interactor)
+        
+        // Detach
+        detachChild(login)
+        self.login = nil
+        
+        // Attach
+        self.dashboard = dashboard
+        attachChild(dashboard)
+        viewController.replaceRootWithNavigation(viewControllable: dashboard.viewControllable)
     }
 }

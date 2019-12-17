@@ -10,9 +10,15 @@ import Foundation
 
 enum LocalSettings {
     
+    enum LoginStatus: Int {
+        case loggedOut
+        case loggedIn
+    }
+    
     // MARK: - Keys
     
     static private let kAppWalkthroughStatusKey: String = "kAppWalkthroughStatusKey"
+    static private let kAppLoginStatusKey: String = "kAppLoginStatusKey"
     
     // MARK: - Walkthrough
     
@@ -26,5 +32,22 @@ enum LocalSettings {
     
     static func removeWalkthroughStatus() {
         UserDefaults.standard.removeObject(forKey: kAppWalkthroughStatusKey)
+    }
+    
+    // MARK: - Login status
+    
+    static func saveLoginStatus(_ status: LoginStatus) {
+        UserDefaults.standard.set(status.rawValue, forKey: kAppLoginStatusKey)
+    }
+    
+    static func getLoginStatus() -> LoginStatus {
+        guard let status = LoginStatus(rawValue: UserDefaults.standard.integer(forKey: kAppLoginStatusKey)) else {
+            return .loggedOut
+        }
+        return status
+    }
+    
+    static func removeLoginStatus() {
+        UserDefaults.standard.removeObject(forKey: kAppLoginStatusKey)
     }
 }

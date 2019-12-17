@@ -32,4 +32,10 @@ extension RootViewController {
         let vc = viewControllable.uiviewController
         replaceRoot(to: vc)
     }
+    
+    func replaceRootWithNavigation(viewControllable: ViewControllable) {
+        // NOTE: とりあえずRIBにはせず、VCで遷移のときに入れてみる
+        let vc = UINavigationController(rootViewController: viewControllable.uiviewController)
+        replaceRoot(to: vc)
+    }
 }

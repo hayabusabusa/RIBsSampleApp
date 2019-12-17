@@ -20,7 +20,7 @@ protocol LoginPresentable: Presentable {
 }
 
 protocol LoginListener: class {
-    // Parent RIB
+    func didLogin()
 }
 
 final class LoginInteractor: PresentableInteractor<LoginPresentable>, LoginInteractable, LoginPresentableListener {
@@ -52,7 +52,9 @@ extension LoginInteractor {
         
         if userName == Configurations.kCommonUserName,
             password == Configurations.kCommonUserPassword {
+            LocalSettings.saveLoginStatus(.loggedIn)
             presenter.updateErrorMessage(message: nil)
+            listener?.didLogin()
         } else {
             presenter.updateErrorMessage(message: "ユーザー名もしくはパスワードが一致しません。")
         }
