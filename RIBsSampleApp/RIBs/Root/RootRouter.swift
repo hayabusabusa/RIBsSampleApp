@@ -12,7 +12,7 @@ import RIBs
 ///
 /// - Child RIB: Walkthrough RIB
 /// - Child RIB: Login RIB
-protocol RootInteractable: Interactable, WalkthroughListener, LoginListener {
+protocol RootInteractable: Interactable, WalkthroughListener, LoginListener, DashboardListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
@@ -32,14 +32,21 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     private let loginBuilder: LoginBuildable
     private var login: ViewableRouting?
     
+    private let dashboardBuilder: DashboardBuildable
+    private var dashboard: ViewableRouting?
+    
     // MARK: Initializer
 
     init(interactor: RootInteractable,
                   viewController: RootViewControllable,
                   walkthroughBuilder: WalkthroughBuildable,
-                  loginBuilder: LoginBuildable) {
+                  loginBuilder: LoginBuildable,
+                  dashboardBuilder: DashboardBuildable) {
+        // Child RIBs
         self.walkthroughBuilder = walkthroughBuilder
         self.loginBuilder = loginBuilder
+        self.dashboardBuilder = dashboardBuilder
+        
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }

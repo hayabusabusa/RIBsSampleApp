@@ -51,6 +51,7 @@
 		A4F9DF7223A8BF7E007E0E07 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6D23A8BF7E007E0E07 /* DashboardViewController.swift */; };
 		A4F9DF7323A8BF7E007E0E07 /* DashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6E23A8BF7E007E0E07 /* DashboardBuilder.swift */; };
 		A4F9DF7423A8BF7E007E0E07 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF6F23A8BF7E007E0E07 /* DashboardInteractor.swift */; };
+		A4F9DF7623A8C12A007E0E07 /* RootDependencyDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF7523A8C12A007E0E07 /* RootDependencyDashboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		A4F9DF6D23A8BF7E007E0E07 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		A4F9DF6E23A8BF7E007E0E07 /* DashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBuilder.swift; sourceTree = "<group>"; };
 		A4F9DF6F23A8BF7E007E0E07 /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
+		A4F9DF7523A8C12A007E0E07 /* RootDependencyDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDependencyDashboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				71EACEC523A7E018001DD92D /* AppComponent.swift */,
 				A4F9DF4923A860DE007E0E07 /* RootDependencyWalkthrough.swift */,
 				A4F9DF6223A8A090007E0E07 /* RootDependencyLogin.swift */,
+				A4F9DF7523A8C12A007E0E07 /* RootDependencyDashboard.swift */,
 			);
 			path = Dependency;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				71EACEC623A7E018001DD92D /* AppComponent.swift in Sources */,
 				A4F9DF7323A8BF7E007E0E07 /* DashboardBuilder.swift in Sources */,
 				71EACEBC23A7DD58001DD92D /* RootRouter.swift in Sources */,
+				A4F9DF7623A8C12A007E0E07 /* RootDependencyDashboard.swift in Sources */,
 				A4F9DF5523A89F4A007E0E07 /* BaseViewController.swift in Sources */,
 				A4F9DF4423A85F4A007E0E07 /* WalkthroughRouter.swift in Sources */,
 				A4F9DF4823A85F4A007E0E07 /* WalkthroughInteractor.swift in Sources */,
