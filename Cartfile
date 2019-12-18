@@ -1,2 +1,6 @@
 github "ReactiveX/RxSwift" ~> 5.0
 github "uber/RIBs" ~> 0.9
+
+# UI
+# Chart
+github "danielgindi/Charts" ~> 3.4.0

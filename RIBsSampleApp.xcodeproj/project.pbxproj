@@ -13,13 +13,9 @@
 		7156F1F023A548FA007DA980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7156F1EE23A548FA007DA980 /* LaunchScreen.storyboard */; };
 		7156F1FB23A548FB007DA980 /* RIBsSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7156F1FA23A548FB007DA980 /* RIBsSampleAppTests.swift */; };
 		7156F20A23A54955007DA980 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20623A54954007DA980 /* RxSwift.framework */; };
-		7156F20B23A54955007DA980 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20623A54954007DA980 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7156F20C23A54955007DA980 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20723A54954007DA980 /* RxCocoa.framework */; };
-		7156F20D23A54955007DA980 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20723A54954007DA980 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7156F20E23A54955007DA980 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20823A54954007DA980 /* RxRelay.framework */; };
-		7156F20F23A54955007DA980 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20823A54954007DA980 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7156F21023A54955007DA980 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20923A54954007DA980 /* RIBs.framework */; };
-		7156F21123A54955007DA980 /* RIBs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7156F20923A54954007DA980 /* RIBs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		716C716923A8FBFD00A78E9D /* AnimationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C716823A8FBFD00A78E9D /* AnimationButton.swift */; };
 		716C717023A90D4500A78E9D /* TimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C716B23A90D4500A78E9D /* TimerRouter.swift */; };
 		716C717123A90D4500A78E9D /* TimerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716C716C23A90D4500A78E9D /* TimerViewController.storyboard */; };
@@ -35,6 +31,7 @@
 		71EACEC323A7DD93001DD92D /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEC223A7DD93001DD92D /* Storyboard.swift */; };
 		71EACEC623A7E018001DD92D /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEC523A7E018001DD92D /* AppComponent.swift */; };
 		A40B7C2023A9C02000F9FF23 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7C1F23A9C02000F9FF23 /* BaseNavigationController.swift */; };
+		A40B7C2223A9C8EC00F9FF23 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40B7C2123A9C8EC00F9FF23 /* Charts.framework */; };
 		A4F9DF4423A85F4A007E0E07 /* WalkthroughRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF3F23A85F4A007E0E07 /* WalkthroughRouter.swift */; };
 		A4F9DF4523A85F4A007E0E07 /* WalkthroughViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F9DF4023A85F4A007E0E07 /* WalkthroughViewController.storyboard */; };
 		A4F9DF4623A85F4A007E0E07 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF4123A85F4A007E0E07 /* WalkthroughViewController.swift */; };
@@ -72,23 +69,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		7156F21223A54955007DA980 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				7156F20D23A54955007DA980 /* RxCocoa.framework in Embed Frameworks */,
-				7156F20B23A54955007DA980 /* RxSwift.framework in Embed Frameworks */,
-				7156F21123A54955007DA980 /* RIBs.framework in Embed Frameworks */,
-				7156F20F23A54955007DA980 /* RxRelay.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		7156F1E023A548F8007DA980 /* RIBsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIBsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7156F1E323A548F8007DA980 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +98,7 @@
 		71EACEC223A7DD93001DD92D /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		71EACEC523A7E018001DD92D /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		A40B7C1F23A9C02000F9FF23 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		A40B7C2123A9C8EC00F9FF23 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		A4F9DF3F23A85F4A007E0E07 /* WalkthroughRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughRouter.swift; sourceTree = "<group>"; };
 		A4F9DF4023A85F4A007E0E07 /* WalkthroughViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkthroughViewController.storyboard; sourceTree = "<group>"; };
 		A4F9DF4123A85F4A007E0E07 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +133,7 @@
 			files = (
 				7156F20C23A54955007DA980 /* RxCocoa.framework in Frameworks */,
 				7156F20A23A54955007DA980 /* RxSwift.framework in Frameworks */,
+				A40B7C2223A9C8EC00F9FF23 /* Charts.framework in Frameworks */,
 				7156F21023A54955007DA980 /* RIBs.framework in Frameworks */,
 				7156F20E23A54955007DA980 /* RxRelay.framework in Frameworks */,
 			);
@@ -213,6 +195,7 @@
 		7156F20523A54954007DA980 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A40B7C2123A9C8EC00F9FF23 /* Charts.framework */,
 				7156F20923A54954007DA980 /* RIBs.framework */,
 				7156F20723A54954007DA980 /* RxCocoa.framework */,
 				7156F20823A54954007DA980 /* RxRelay.framework */,
@@ -372,7 +355,6 @@
 				7156F1DC23A548F8007DA980 /* Sources */,
 				7156F1DD23A548F8007DA980 /* Frameworks */,
 				7156F1DE23A548F8007DA980 /* Resources */,
-				7156F21223A54955007DA980 /* Embed Frameworks */,
 				7156F21323A5495B007DA980 /* Carthage */,
 			);
 			buildRules = (
@@ -477,6 +459,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RIBs.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
