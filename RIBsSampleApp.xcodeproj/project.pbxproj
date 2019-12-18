@@ -32,6 +32,8 @@
 		71EACEC623A7E018001DD92D /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEC523A7E018001DD92D /* AppComponent.swift */; };
 		A40B7C2023A9C02000F9FF23 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7C1F23A9C02000F9FF23 /* BaseNavigationController.swift */; };
 		A40B7C2223A9C8EC00F9FF23 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40B7C2123A9C8EC00F9FF23 /* Charts.framework */; };
+		A40B7C2723A9CA2900F9FF23 /* Study.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7C2623A9CA2900F9FF23 /* Study.swift */; };
+		A40B7C2A23A9CAA400F9FF23 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7C2923A9CAA400F9FF23 /* UserDefaultsRepository.swift */; };
 		A4F9DF4423A85F4A007E0E07 /* WalkthroughRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF3F23A85F4A007E0E07 /* WalkthroughRouter.swift */; };
 		A4F9DF4523A85F4A007E0E07 /* WalkthroughViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F9DF4023A85F4A007E0E07 /* WalkthroughViewController.storyboard */; };
 		A4F9DF4623A85F4A007E0E07 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF4123A85F4A007E0E07 /* WalkthroughViewController.swift */; };
@@ -99,6 +101,8 @@
 		71EACEC523A7E018001DD92D /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		A40B7C1F23A9C02000F9FF23 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		A40B7C2123A9C8EC00F9FF23 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
+		A40B7C2623A9CA2900F9FF23 /* Study.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study.swift; sourceTree = "<group>"; };
+		A40B7C2923A9CAA400F9FF23 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
 		A4F9DF3F23A85F4A007E0E07 /* WalkthroughRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughRouter.swift; sourceTree = "<group>"; };
 		A4F9DF4023A85F4A007E0E07 /* WalkthroughViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkthroughViewController.storyboard; sourceTree = "<group>"; };
 		A4F9DF4123A85F4A007E0E07 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 			children = (
 				7156F1E323A548F8007DA980 /* AppDelegate.swift */,
 				7156F1E523A548F8007DA980 /* SceneDelegate.swift */,
+				A40B7C2423A9CA0000F9FF23 /* Infrastracture */,
 				71EACEB523A7DCEC001DD92D /* RIBs */,
 				A4F9DF5023A89A0B007E0E07 /* View */,
 				71EACEC123A7DD61001DD92D /* Environment */,
@@ -269,6 +274,31 @@
 				A4F9DF7523A8C12A007E0E07 /* RootDependencyDashboard.swift */,
 			);
 			path = Dependency;
+			sourceTree = "<group>";
+		};
+		A40B7C2423A9CA0000F9FF23 /* Infrastracture */ = {
+			isa = PBXGroup;
+			children = (
+				A40B7C2523A9CA1D00F9FF23 /* Entity */,
+				A40B7C2823A9CA9400F9FF23 /* Repository */,
+			);
+			path = Infrastracture;
+			sourceTree = "<group>";
+		};
+		A40B7C2523A9CA1D00F9FF23 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A40B7C2623A9CA2900F9FF23 /* Study.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A40B7C2823A9CA9400F9FF23 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A40B7C2923A9CAA400F9FF23 /* UserDefaultsRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		A4F9DF3E23A85F1C007E0E07 /* Walkthrough */ = {
@@ -477,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40B7C2A23A9CAA400F9FF23 /* UserDefaultsRepository.swift in Sources */,
 				A4F9DF4A23A860DE007E0E07 /* RootDependencyWalkthrough.swift in Sources */,
 				A4F9DF7423A8BF7E007E0E07 /* DashboardInteractor.swift in Sources */,
 				716C716923A8FBFD00A78E9D /* AnimationButton.swift in Sources */,
@@ -506,6 +537,7 @@
 				A4F9DF5223A89A92007E0E07 /* RoundedButton.swift in Sources */,
 				A4F9DF6523A8B1B4007E0E07 /* LocalSettings.swift in Sources */,
 				7156F1E423A548F8007DA980 /* AppDelegate.swift in Sources */,
+				A40B7C2723A9CA2900F9FF23 /* Study.swift in Sources */,
 				A4F9DF5D23A89FAB007E0E07 /* LoginRouter.swift in Sources */,
 				716C717323A90D4500A78E9D /* TimerBuilder.swift in Sources */,
 				7156F1E623A548F8007DA980 /* SceneDelegate.swift in Sources */,
