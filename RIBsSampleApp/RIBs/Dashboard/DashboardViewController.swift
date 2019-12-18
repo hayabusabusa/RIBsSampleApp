@@ -43,6 +43,7 @@ final class DashboardViewController: BaseViewController, DashboardPresentable, D
 extension DashboardViewController {
     
     private func setupViews() {
+        navigationItem.title = "Dashboard"
         fabButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in self?.listener?.tapFabButton() })
             .disposed(by: disposeBag)

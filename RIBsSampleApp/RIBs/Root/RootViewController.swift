@@ -37,7 +37,7 @@ extension RootViewController {
     
     func replaceRootWithNavigation(viewControllable: ViewControllable) {
         // NOTE: とりあえずRIBにはせず、VCで遷移のときに入れてみる
-        let vc = UINavigationController(rootViewController: viewControllable.uiviewController)
+        let vc = BaseNavigationController(rootViewController: viewControllable.uiviewController)
         replaceRoot(to: vc)
     }
 }

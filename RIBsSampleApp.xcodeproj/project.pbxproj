@@ -34,6 +34,7 @@
 		71EACEC023A7DD58001DD92D /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEBB23A7DD58001DD92D /* RootInteractor.swift */; };
 		71EACEC323A7DD93001DD92D /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEC223A7DD93001DD92D /* Storyboard.swift */; };
 		71EACEC623A7E018001DD92D /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEC523A7E018001DD92D /* AppComponent.swift */; };
+		A40B7C2023A9C02000F9FF23 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7C1F23A9C02000F9FF23 /* BaseNavigationController.swift */; };
 		A4F9DF4423A85F4A007E0E07 /* WalkthroughRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF3F23A85F4A007E0E07 /* WalkthroughRouter.swift */; };
 		A4F9DF4523A85F4A007E0E07 /* WalkthroughViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F9DF4023A85F4A007E0E07 /* WalkthroughViewController.storyboard */; };
 		A4F9DF4623A85F4A007E0E07 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9DF4123A85F4A007E0E07 /* WalkthroughViewController.swift */; };
@@ -116,6 +117,7 @@
 		71EACEBB23A7DD58001DD92D /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		71EACEC223A7DD93001DD92D /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		71EACEC523A7E018001DD92D /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		A40B7C1F23A9C02000F9FF23 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		A4F9DF3F23A85F4A007E0E07 /* WalkthroughRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughRouter.swift; sourceTree = "<group>"; };
 		A4F9DF4023A85F4A007E0E07 /* WalkthroughViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkthroughViewController.storyboard; sourceTree = "<group>"; };
 		A4F9DF4123A85F4A007E0E07 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				A4F9DF5423A89F4A007E0E07 /* BaseViewController.swift */,
+				A40B7C1F23A9C02000F9FF23 /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				A4F9DF4723A85F4A007E0E07 /* WalkthroughBuilder.swift in Sources */,
 				71EACEC623A7E018001DD92D /* AppComponent.swift in Sources */,
 				716C717023A90D4500A78E9D /* TimerRouter.swift in Sources */,
+				A40B7C2023A9C02000F9FF23 /* BaseNavigationController.swift in Sources */,
 				A4F9DF7323A8BF7E007E0E07 /* DashboardBuilder.swift in Sources */,
 				71EACEBC23A7DD58001DD92D /* RootRouter.swift in Sources */,
 				A4F9DF7623A8C12A007E0E07 /* RootDependencyDashboard.swift in Sources */,
