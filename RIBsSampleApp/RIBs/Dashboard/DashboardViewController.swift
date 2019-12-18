@@ -37,6 +37,8 @@ final class DashboardViewController: BaseViewController, DashboardPresentable, D
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        
+        // NOTE: ViewDidLoad完了をInteractorに伝えてRouterでattach
         listener?.viewDidLoad()
     }
 }
