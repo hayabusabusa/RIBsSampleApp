@@ -11,6 +11,7 @@ import RxSwift
 
 protocol DashboardRouting: ViewableRouting {
     func routeToTimer()
+    func backFromTimer()
 }
 
 protocol DashboardPresentable: Presentable {
@@ -48,5 +49,14 @@ extension DashboardInteractor {
     
     func tapFabButton() {
         router?.routeToTimer()
+    }
+}
+
+// MARK: - Child RIB Listener
+
+extension DashboardInteractor {
+    
+    func didClose() {
+        router?.backFromTimer()
     }
 }

@@ -55,8 +55,14 @@ extension DashboardViewController {
 extension DashboardViewController {
     
     func present(viewControllable: ViewControllable) {
-        let vc = viewControllable.uiviewController
+        let vc = BaseNavigationController(rootViewController: viewControllable.uiviewController)
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
+    }
+    
+    func dismiss(viewControllable: ViewControllable) {
+        // NOTE: NavigationControllerをpresentで噛ませていると、ここで困る
+        // === で引数のviewControllableと比較してTrueを結果として得られない.
+        dismiss(animated: true, completion: nil)
     }
 }

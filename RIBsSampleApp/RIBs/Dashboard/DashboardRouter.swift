@@ -15,6 +15,7 @@ protocol DashboardInteractable: Interactable, TimerListener {
 
 protocol DashboardViewControllable: ViewControllable {
     func present(viewControllable: ViewControllable)
+    func dismiss(viewControllable: ViewControllable)
 }
 
 final class DashboardRouter: ViewableRouter<DashboardInteractable, DashboardViewControllable>, DashboardRouting {
@@ -42,5 +43,12 @@ extension DashboardRouter {
         self.timer = timer
         attachChild(timer)
         viewController.present(viewControllable: timer.viewControllable)
+    }
+    
+    func backFromTimer() {
+        guard let timer = timer else { return }
+        viewController.dismiss(viewControllable: timer.viewControllable)
+        detachChild(timer)
+        self.timer = nil
     }
 }

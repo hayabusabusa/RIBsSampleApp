@@ -8,15 +8,14 @@
 
 import RIBs
 import RxSwift
+import RxCocoa
 import UIKit
 
 protocol TimerPresentableListener: class {
-    // TODO: Declare properties and methods that the view controller can invoke to perform
-    // business logic, such as signIn(). This protocol is implemented by the corresponding
-    // interactor class.
+    func tapCloseButton()
 }
 
-final class TimerViewController: UIViewController, TimerPresentable, TimerViewControllable {
+final class TimerViewController: BaseViewController, TimerPresentable, TimerViewControllable {
 
     weak var listener: TimerPresentableListener?
     
@@ -25,5 +24,25 @@ final class TimerViewController: UIViewController, TimerPresentable, TimerViewCo
     static func instantiate() -> TimerViewController {
         let vc = Storyboard.TimerViewController.instantiate(TimerViewController.self)
         return vc
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupNavigation()
+    }
+}
+
+// MARK: - Setup
+
+extension TimerViewController {
+    
+    private func setupNavigation() {
+        let leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: nil)
+        navigationItem.leftBarButtonItem = leftBarButtonItem
+        leftBarButtonItem.rx.tap.asSignal()
+            .emit(onNext: { [weak self] in
+                self?.listener?.tapCloseButton()
+            })
+            .disposed(by: disposeBag)
     }
 }
