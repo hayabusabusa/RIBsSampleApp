@@ -23,6 +23,12 @@
 		716C717323A90D4500A78E9D /* TimerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C716E23A90D4500A78E9D /* TimerBuilder.swift */; };
 		716C717423A90D4500A78E9D /* TimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C716F23A90D4500A78E9D /* TimerInteractor.swift */; };
 		716C717723A90DB500A78E9D /* DashboardDpendencyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C717623A90DB500A78E9D /* DashboardDpendencyTimer.swift */; };
+		716C717F23AA44E800A78E9D /* DashboardBarChartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C717A23AA44E800A78E9D /* DashboardBarChartRouter.swift */; };
+		716C718023AA44E800A78E9D /* DashboardBarChartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716C717B23AA44E800A78E9D /* DashboardBarChartViewController.storyboard */; };
+		716C718123AA44E800A78E9D /* DashboardBarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C717C23AA44E800A78E9D /* DashboardBarChartViewController.swift */; };
+		716C718223AA44E800A78E9D /* DashboardBarChartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C717D23AA44E800A78E9D /* DashboardBarChartBuilder.swift */; };
+		716C718323AA44E800A78E9D /* DashboardBarChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C717E23AA44E800A78E9D /* DashboardBarChartInteractor.swift */; };
+		716C718523AA458D00A78E9D /* DashboardDependencyDashboardBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C718423AA458D00A78E9D /* DashboardDependencyDashboardBarChart.swift */; };
 		71EACEBC23A7DD58001DD92D /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEB723A7DD58001DD92D /* RootRouter.swift */; };
 		71EACEBD23A7DD58001DD92D /* RootViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71EACEB823A7DD58001DD92D /* RootViewController.storyboard */; };
 		71EACEBE23A7DD58001DD92D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EACEB923A7DD58001DD92D /* RootViewController.swift */; };
@@ -92,6 +98,12 @@
 		716C716E23A90D4500A78E9D /* TimerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBuilder.swift; sourceTree = "<group>"; };
 		716C716F23A90D4500A78E9D /* TimerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInteractor.swift; sourceTree = "<group>"; };
 		716C717623A90DB500A78E9D /* DashboardDpendencyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDpendencyTimer.swift; sourceTree = "<group>"; };
+		716C717A23AA44E800A78E9D /* DashboardBarChartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBarChartRouter.swift; sourceTree = "<group>"; };
+		716C717B23AA44E800A78E9D /* DashboardBarChartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashboardBarChartViewController.storyboard; sourceTree = "<group>"; };
+		716C717C23AA44E800A78E9D /* DashboardBarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBarChartViewController.swift; sourceTree = "<group>"; };
+		716C717D23AA44E800A78E9D /* DashboardBarChartBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBarChartBuilder.swift; sourceTree = "<group>"; };
+		716C717E23AA44E800A78E9D /* DashboardBarChartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBarChartInteractor.swift; sourceTree = "<group>"; };
+		716C718423AA458D00A78E9D /* DashboardDependencyDashboardBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDependencyDashboardBarChart.swift; sourceTree = "<group>"; };
 		71EACEB723A7DD58001DD92D /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		71EACEB823A7DD58001DD92D /* RootViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootViewController.storyboard; sourceTree = "<group>"; };
 		71EACEB923A7DD58001DD92D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -225,8 +237,29 @@
 			isa = PBXGroup;
 			children = (
 				716C717623A90DB500A78E9D /* DashboardDpendencyTimer.swift */,
+				716C718423AA458D00A78E9D /* DashboardDependencyDashboardBarChart.swift */,
 			);
 			path = Dependency;
+			sourceTree = "<group>";
+		};
+		716C717823AA44A800A78E9D /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				716C717923AA44BF00A78E9D /* DashboardBarChart */,
+			);
+			path = Child;
+			sourceTree = "<group>";
+		};
+		716C717923AA44BF00A78E9D /* DashboardBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				716C717A23AA44E800A78E9D /* DashboardBarChartRouter.swift */,
+				716C717B23AA44E800A78E9D /* DashboardBarChartViewController.storyboard */,
+				716C717C23AA44E800A78E9D /* DashboardBarChartViewController.swift */,
+				716C717D23AA44E800A78E9D /* DashboardBarChartBuilder.swift */,
+				716C717E23AA44E800A78E9D /* DashboardBarChartInteractor.swift */,
+			);
+			path = DashboardBarChart;
 			sourceTree = "<group>";
 		};
 		71EACEB523A7DCEC001DD92D /* RIBs */ = {
@@ -366,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				716C717523A90D9E00A78E9D /* Dependency */,
+				716C717823AA44A800A78E9D /* Child */,
 				A4F9DF6B23A8BF7E007E0E07 /* DashboardRouter.swift */,
 				A4F9DF6C23A8BF7E007E0E07 /* DashboardViewController.storyboard */,
 				A4F9DF6D23A8BF7E007E0E07 /* DashboardViewController.swift */,
@@ -464,6 +498,7 @@
 				716C717123A90D4500A78E9D /* TimerViewController.storyboard in Resources */,
 				A4F9DF4523A85F4A007E0E07 /* WalkthroughViewController.storyboard in Resources */,
 				71EACEBD23A7DD58001DD92D /* RootViewController.storyboard in Resources */,
+				716C718023AA44E800A78E9D /* DashboardBarChartViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,11 +550,13 @@
 				A4F9DF4D23A87657007E0E07 /* UIScrollView+Rx.swift in Sources */,
 				A4F9DF6723A8B499007E0E07 /* Configurations.swift in Sources */,
 				A4F9DF6323A8A090007E0E07 /* RootDependencyLogin.swift in Sources */,
+				716C717F23AA44E800A78E9D /* DashboardBarChartRouter.swift in Sources */,
 				716C717723A90DB500A78E9D /* DashboardDpendencyTimer.swift in Sources */,
 				A4F9DF6923A8B555007E0E07 /* LineTextField.swift in Sources */,
 				A4F9DF6123A89FAB007E0E07 /* LoginInteractor.swift in Sources */,
 				71EACEBE23A7DD58001DD92D /* RootViewController.swift in Sources */,
 				A4F9DF4F23A882D7007E0E07 /* UIViewController+Extension.swift in Sources */,
+				716C718323AA44E800A78E9D /* DashboardBarChartInteractor.swift in Sources */,
 				A4F9DF5F23A89FAB007E0E07 /* LoginViewController.swift in Sources */,
 				A4F9DF4723A85F4A007E0E07 /* WalkthroughBuilder.swift in Sources */,
 				71EACEC623A7E018001DD92D /* AppComponent.swift in Sources */,
@@ -528,12 +565,15 @@
 				A4F9DF7323A8BF7E007E0E07 /* DashboardBuilder.swift in Sources */,
 				71EACEBC23A7DD58001DD92D /* RootRouter.swift in Sources */,
 				A4F9DF7623A8C12A007E0E07 /* RootDependencyDashboard.swift in Sources */,
+				716C718523AA458D00A78E9D /* DashboardDependencyDashboardBarChart.swift in Sources */,
 				A4F9DF5523A89F4A007E0E07 /* BaseViewController.swift in Sources */,
 				A4F9DF4423A85F4A007E0E07 /* WalkthroughRouter.swift in Sources */,
 				A4F9DF4823A85F4A007E0E07 /* WalkthroughInteractor.swift in Sources */,
 				716C717423A90D4500A78E9D /* TimerInteractor.swift in Sources */,
 				71EACEC023A7DD58001DD92D /* RootInteractor.swift in Sources */,
+				716C718123AA44E800A78E9D /* DashboardBarChartViewController.swift in Sources */,
 				71EACEC323A7DD93001DD92D /* Storyboard.swift in Sources */,
+				716C718223AA44E800A78E9D /* DashboardBarChartBuilder.swift in Sources */,
 				A4F9DF5223A89A92007E0E07 /* RoundedButton.swift in Sources */,
 				A4F9DF6523A8B1B4007E0E07 /* LocalSettings.swift in Sources */,
 				7156F1E423A548F8007DA980 /* AppDelegate.swift in Sources */,

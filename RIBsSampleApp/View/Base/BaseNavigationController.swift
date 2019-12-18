@@ -31,7 +31,7 @@ extension BaseNavigationController {
         view.backgroundColor = .systemBackground
         navigationBar.tintColor = .systemBlue
         navigationBar.barTintColor = .systemBackground
-        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        //navigationBar.setBackgroundImage(UIImage(), for: .default)
         //navigationBar.shadowImage = UIImage()
         navigationBar.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 16, weight: .bold),
                                              .foregroundColor: UIColor.systemBlue]

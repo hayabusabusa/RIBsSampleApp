@@ -10,6 +10,7 @@ import RIBs
 import RxSwift
 
 protocol DashboardRouting: ViewableRouting {
+    func attachBarChart()
     func routeToTimer()
     func backFromTimer()
 }
@@ -27,8 +28,6 @@ final class DashboardInteractor: PresentableInteractor<DashboardPresentable>, Da
     weak var router: DashboardRouting?
     weak var listener: DashboardListener?
 
-    // TODO: Add additional dependencies to constructor. Do not perform any logic
-    // in constructor.
     override init(presenter: DashboardPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
@@ -36,16 +35,18 @@ final class DashboardInteractor: PresentableInteractor<DashboardPresentable>, Da
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        // TODO: Implement business logic here.
     }
 
     override func willResignActive() {
         super.willResignActive()
-        // TODO: Pause any business logic.
     }
 }
 
 extension DashboardInteractor {
+    
+    func viewDidLoad() {
+        router?.attachBarChart()
+    }
     
     func tapFabButton() {
         router?.routeToTimer()

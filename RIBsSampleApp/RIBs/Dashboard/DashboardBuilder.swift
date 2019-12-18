@@ -37,10 +37,12 @@ final class DashboardBuilder: Builder<DashboardDependency>, DashboardBuildable {
         interactor.listener = listener
         
         // Child RIBs
+        let dashboardBarChartBuilder = DashboardBarChartBuilder(dependency: component)
         let timerBuilder = TimerBuilder(dependency: component)
         
         return DashboardRouter(interactor: interactor,
                                viewController: viewController,
+                               dashboardBarChartBuilder: dashboardBarChartBuilder,
                                timerBuilder: timerBuilder)
     }
 }
